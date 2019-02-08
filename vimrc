@@ -4,13 +4,20 @@ set mouse=a
 set relativenumber
 set number
 
-set ts=4 sw=4
+set ts=8 sw=8
 
 set cursorcolumn
 set cursorline
 
+set hlsearch
+
 set list
 set listchars=tab:\|\ 
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=DarkGray
+
+set tw=80
 
 call plug#begin('~/.vim/plugged')
 
