@@ -1,38 +1,60 @@
-colorscheme cobalt
-set mouse=a
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-set relativenumber
-set number
+colorscheme cobalt "name of colorscheme
+hi Normal guibg=NONE ctermbg=NONE "use terminal background settings
 
-set ts=8 sw=8
+set number "display current number line
+set relativenumber "display relative numeber lines
+set mouse=a "allow mouse navigation
 
-set cursorcolumn
+set hidden "allow buffers
+set history=100 "let vim use more memory
+
+set tabstop=8 "width of tab
+set softtabstop=0 noexpandtab "enforce tab defaults
+set shiftwidth=8 "width of indent
+
+set hlsearch "highlight found words
+set showmatch "display matching parantheses
+
 set cursorline
-
-set hlsearch
+set cursorcolumn
 
 set list
 set listchars=tab:\|\ 
 
-set colorcolumn=80
+set colorcolumn=80 "display vertical line at column 80
 highlight ColorColumn ctermbg=DarkGray
 
-set tw=80
+set tw=80 "text wrap at 80 characters
 
+" specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree'
-
-Plug 'w0rp/ale'
-
-Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'ap/vim-buftabline'
+
+Plug 'tpope/vim-fugitive'
+
 Plug 'sickill/vim-pasta'
 
-"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'w0rp/ale'
 
+Plug 'scrooloose/nerdtree'
+
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
+Plug 'airblade/vim-gitgutter'
+
+" initialize plugin system
 call plug#end()
 
-map <silent> <C-n> :NERDTreeToggle<CR>
+" key to toggle nerd tree
+:nnoremap <C-n> :NERDTreeToggle<CR>
