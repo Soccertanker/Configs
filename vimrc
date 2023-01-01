@@ -27,6 +27,8 @@ set showmatch "display matching parantheses
 set cursorline
 set cursorcolumn
 
+set autoindent
+
 set list
 set listchars=tab:\|\ 
 
