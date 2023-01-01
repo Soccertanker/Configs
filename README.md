@@ -6,3 +6,5 @@
    ```
    * This will open vim and start installing all vim plugins.
 3. Wait for all vim plugins to install successfully on the left side of the screen.
+4. cat bashrc >> ~/.bashrc
+5. Copy tmux.conf to ~/.tmux.conf
