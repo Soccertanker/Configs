@@ -21,7 +21,9 @@ set showmatch "display matching parantheses
 set cursorline
 set cursorcolumn
 
+" allow for smart indenting on newline depending on file type
 set autoindent
+filetype plugin indent on
 
 set list
 set listchars=tab:\|\ 
@@ -29,4 +31,9 @@ set listchars=tab:\|\
 set colorcolumn=80 "display vertical line at column 80
 highlight ColorColumn ctermbg=DarkGray
 
+" click shift tab to toggle between tabs and spaces for indent
 nnoremap <S-Tab> :set expandtab!<cr>:set expandtab?<cr>
+
+" smart searching
+set ignorecase
+set smartcase
