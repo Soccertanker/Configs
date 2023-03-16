@@ -28,3 +28,5 @@ set listchars=tab:\|\
 
 set colorcolumn=80 "display vertical line at column 80
 highlight ColorColumn ctermbg=DarkGray
+
+nnoremap <S-Tab> :set expandtab!<cr>:set expandtab?<cr>
