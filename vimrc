@@ -29,7 +29,7 @@ filetype plugin indent on
 
 set laststatus=2
 set list
-set listchars=eol:,$tab:\|\ ,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:\|\ ,trail:~,extends:>,precedes:<
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -45,6 +45,10 @@ highlight ColorColumn ctermbg=DarkGray
 
 " click shift tab to toggle between tabs and spaces for indent
 nnoremap <S-Tab> :set expandtab!<cr>:set expandtab?<cr>
+" click control p to toggle paste mode
+nnoremap <C-p> :set paste!<cr>:set paste?<cr>
+
+
 
 " smart searching
 set ignorecase

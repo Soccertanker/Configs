@@ -1,0 +1,10 @@
+set editing-mode vi
+
+# in insert mode, cursor is a narrow bar
+set vi-ins-mode-string \1\e[6 q\2
+
+# in command mode, cursor is a wide bar
+set vi-cmd-mode-string \1\e[2 q\2
+
+# don't ring the terminal bell
+set bell-style none
