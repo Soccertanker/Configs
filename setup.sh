@@ -40,3 +40,5 @@ install_safe 644 convenience-scripts.rc ~/.bashrc.d/convenience-scripts.rc
 install_safe 644 tmux.conf ~/.tmux.conf
 
 install_safe 644 inputrc ~/.inputrc
+
+printf "\033[33mBe sure to set a global git config in ~/.gitconfig - https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup\033[0m\n"
