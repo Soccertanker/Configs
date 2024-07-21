@@ -1,12 +1,11 @@
 #!/bin/bash
 
-mkdir -p ~/.vim/
-cp vimrc ~/.vim/
-cp -r colors ~/.vim/
+install -Dpbm 640 vimrc ~/.vim/vimrc
+install -Dpbm 640 colors ~/.vim/colors
 
-# append ~/.bashrc with bashrc.append
-cat bashrc.append >> ~/.bashrc
+install -Dpbm 640 convenience.sh ~/scripts/convenience.sh
+echo "source ~/scripts/convenience.sh" >> ~/.bashrc
 
-cp tmux.conf ~/.tmux.conf
+install -Dpbm 640 tmux.conf ~/.tmux.conf
 
-sudo update-alternatives --config editor
+sudo update-alternatives --set editor vim
