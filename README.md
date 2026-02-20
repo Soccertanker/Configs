@@ -22,10 +22,10 @@ get written to ~/Videos.
 
 So, after I start and stop a recording, my file layout looks like this:
  * ~/
- ** **'2026-02-19_20-55-03.mp4'**               # written by OBS Studio
- ** Videos
- *** 'face-cam_2026-02-19_20-55-03.mp4'         # written by Source Record
- *** 'screen-capture_2026-02-19_20-55-03.mp4'   # written by Source Record
+  * **'2026-02-19_20-55-03.mp4'**               # written by OBS Studio
+  * Videos
+   * 'face-cam_2026-02-19_20-55-03.mp4'         # written by Source Record
+   * 'screen-capture_2026-02-19_20-55-03.mp4'   # written by Source Record
 
 The mp4 in ~/ is redundant (it is a duplicate of one of the Source Record mp4s)
 and is taking of storage space on my PC. So I've designed a solution that
