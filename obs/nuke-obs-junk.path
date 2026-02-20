@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor /tmp/obs_junk for new files
+
+[Path]
+MakeDirectory=yes
+DirectoryMode=0777
+DirectoryNotEmpty=/tmp/obs_junk
+Unit=nuke-obs-junk.service
+
+[Install]
+WantedBy=graphical.target

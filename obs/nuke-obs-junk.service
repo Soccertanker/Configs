@@ -1,0 +1,7 @@
+[Unit]
+Description=Delete OBS redundant recordings immediately
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=find /tmp/obs_junk -name "*.mp4" -delete
