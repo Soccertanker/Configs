@@ -29,6 +29,7 @@ function install_safe {
     if [[ -d $source ]]; then
         # source is a directory
         install -Ddpm $mode $source $dest
+        cp -r $source/* $dest/
     else
         # source is a file
         install -Dpm $mode $source $dest
