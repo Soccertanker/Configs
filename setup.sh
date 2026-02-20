@@ -63,6 +63,15 @@ install_safe 0644 obs/nuke-obs-junk.service $systemd_unit_dir/nuke-obs-junk.serv
 sudo systemctl daemon-reload
 sudo systemctl enable --now nuke-obs-junk.path # Enable and start monitoring for OBS junk
 
+# glow is a markdown renderer
+echo '[charm]
+name=Charm
+baseurl=https://repo.charm.sh/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
+sudo dnf install -y glow
+
 if [[ ! -e $HOME/.vim/autoload ]]; then
     printf "Installing vim-plug\n\t"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
