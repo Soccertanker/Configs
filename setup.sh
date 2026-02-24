@@ -72,6 +72,11 @@ gpgcheck=1
 gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 sudo dnf install -y glow
 
+# mpv is better at using nvidia gpu to view videos
+sudo dnf install mpv
+printf "\033[33mAssuming we have an NVidia GPU for mpv to use.\033[0m\n"
+echo "hwdev=nvdec" > ~/.config/mpv/mpv.conf
+
 if [[ ! -e $HOME/.vim/autoload ]]; then
     printf "Installing vim-plug\n\t"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
